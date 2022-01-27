@@ -1,0 +1,82 @@
+version: "2.0"
+
+stories:
+
+- story: formation path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: formation
+  - action: utter_formation
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: formation path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: formation
+  - action: utter_formation
+  - intent: ask_about_branches
+    entities:
+    - branche : "BDCC" 
+  - action: action_Provide_Infos
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: formation path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: formation
+  - action: utter_formation
+  - intent: ask_about_branches
+    entities:
+    - branche : "GLSID" 
+  - action: action_Provide_Infos
+  - intent: scolarite
+  - action: utter_scolarite
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: scolarite path 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: scolarite
+  - action: utter_scolarite
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: branhe path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_about_branches
+    entities:
+    - branche : "BDCC" 
+  - action: action_Provide_Infos
+  - intent: scolarite
+  - action: utter_scolarite
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: branche path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_about_branches
+    entities:
+    - branche : "GIL" 
+  - action: action_Provide_Infos
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: branche path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_entrance_exam
+  - action: utter_entrance_exam
+  - intent: goodbye
+  - action: utter_goodbye

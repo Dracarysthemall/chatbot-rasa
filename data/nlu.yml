@@ -1,0 +1,206 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - Bonjour
+    - Bonsoir
+    - salut
+    - bonjour
+    - Salut
+    - Hey you
+- intent: goodbye
+  examples: |
+    - Au revoir
+    - à la prochaine
+    - bonne journée
+    - bye bye
+    - bye
+    - merci
+    - okay merci
+    - by
+    - au revoir
+- intent: affirm
+  examples: |
+    - oui
+    - d'accord
+    - ok
+    - si
+    - bien sur
+- intent: deny
+  examples: |
+    - Non
+    - Pas du tous
+    - Jamais
+    - je pense pas
+- intent: bot_challenge
+  examples: |
+    - es tu un bot?
+    - Es tu un Homme?
+    - qui es tu?
+    - vous éte qui ?
+    - Est ce que je suis en train de parler avec un Homme?
+    - comment je peux vous apelez
+- intent: scolarite
+  examples: |
+    - le temps de travail de  la  scolarité ?
+    - quel est le temps de travail de  la  scolarité ?
+    - où je peux contacté le service de scolarité ?
+    - les horaires de scolarité
+    - est ce que la scolarité ouverte ?
+    - comment je peux vous contactez ?
+    - J'ai besoin de ton numéro de téléphone
+    - je veux votre email
+    - quelle est ton adresse
+    - je voudrais vous appeler
+    - J'ai besoin de contacter l'administration!
+    - dites-moi quelles sont vos coordonnées, s'il vous plaît!
+    - coordonnées s'il vous plaît
+    - scolarite
+    - comment je peux contacter la scolarité ?
+    - je veux contacter la scolatité
+    - Contact
+    - donner moi le contacte de scolarite
+- intent: formation
+  examples: |
+    - Quelles sont les filières disponnibles dans l'ENSET ?
+    - Quelle sont les formations disponible à enset?
+    - filières à l'Enset
+    - branches d'études
+    - Quelle sont les filières dispensé à l'enset ?
+    - les formations disponibles au sein de l'ENSETM ?
+    - quelle sont les types de formations dans l'enset?
+    - quelles sont les filières disponibles?
+    - quelles sont les formations disponible dans l'enset ?
+    - je veut des informations sur l'enset !
+    - formation
+    - quelle sont les formations disponibles dans l'enset ?
+    - Licence
+    - Formation
+    - formations
+    - quelles sont les formations disponibles?
+    - licence
+    - informations
+- intent: ask_about_branches
+  examples: |
+    - J'ai besoin d'informations sur [II-BDCC](branche)
+    - Je veux des informations sur [glsid](branche)
+    - parle-moi de [gil](branche)
+    - parlez-moi de [bdcc](branche)
+    - alors que pouvez-vous me dire sur [gmsi](branche)
+    - je veux en savoir plus sur [bdcc](branche)
+    - qu'est-ce qu'ils étudient en [gil](branche)?
+    - quelles sont les matières enseignées en [glsid](branche)?
+    - je veux des infos sur [GIL](branche)
+    - okay ou je peux trouve le programme de [bdcc]{"entity": "branche", "value": "BDCC"}
+    - i want [bdcc]{"entity": "branche", "value": "BDCC"}[bdcc](branche)
+    - alright tell me about [GLSID](branche)
+    - tell me about [bdcc](branche)[bdcc]{"entity": "branche", "value": "BDCC"}
+    - [seer ](branche)?
+    - [aoe](branche)
+    - [SEER](branche)
+    - je veux savoir sur [gecsi](branche)
+    - je veux des infos sur [seer](branche)
+    - je veus des informations sur [seer](branche)
+    - formation [glsid](branche)[glsid]{"entity": "branche", "value": "GLSID"}
+    - Je veux des infos sure [GLSID](branche)?
+    - programme [glsid]{"entity": "branche", "value": "GLSID"}[glsid](branche)
+    - [glsid]{"entity": "branche", "value": "GLSID"}[glsid](branche)
+    - [glsid]{"entity": "branche", "value": "GLSID"}[glsid ](branche)?
+    - informtion sur [bdcc](branche)[bdcc]{"entity": "branche", "value": "BDCC"}
+    - Je vous des informations sur le prochain concours de [BDCC](branche)
+    - Je veux des infos sur [GIL](branche)
+    - informations sur [glsid]{"entity": "branche", "value": "GLSID"}[glsid](branche)
+    - Je veux des infos sur [GLSID](branche)
+    - je savoir plus sur la branche [glsid](branche)[glsid]{"entity": "branche", "value": "GLSID"}
+    - Je voudrais qlqs informations sur [AOE](branche)
+    - [fc](branche)
+    - [FC](branche)
+    - [AOE](branche)
+    - [GECSI](branche)
+    - [GMSI](branche)
+    - [GIL](branche)
+- intent: ask_entrance_exam
+  examples: |
+    - quand puis-je postuler à l'concours?
+    - Je veux le calendrier des concours
+    - Quand a lieu le prochain concours?
+    - quand l'concours est organisé?
+    - Je veux connaître la date de l'concours
+    - quand est ce que le concours est organisé ?
+    - je veux des infos sur le concour
+    - je vous des info sur le concour
+    - Je veux des informations sur le prochain concours
+    - les dates des concours ?
+    - Je veux des infos sur le concours
+- intent: ask_for_help
+  examples: |
+    - Help
+    - comment pouvez vous m'aider?
+    - comment tu peux m aider
+    - que pouvez vous faire?
+    - help
+    - comment tu peux m'aider ?
+    - qu'est ce que tu peux faire ?
+    - ok, help
+    - comment tu peux m'aider
+    - Comment tu peux m'aider ?
+    - what can you do
+    - what can you do?
+- intent: intent_depatement
+  examples: |
+    - quelles sont les departements de l'enset ?
+    - combine de département il y a dans l'enset ?
+    - combine de départements existe  dans l'enset ?
+    - quelles sont le departements de l'enset ?
+- intent: nlu_fallback
+  examples: |
+    - programme de [seer](branche)
+    - :)
+    - Quelle branche ?
+- intent: merci
+  examples: |
+    - Merci
+    - ah d'accord, merci!
+- synonym: BDCC
+  examples: |
+    - II-BDCC
+    - IIBDCC
+    - bdcc
+    - Big Data & Cloud Computing
+    - Big Data and Cloud Computing
+    - big data
+- synonym: GLSID
+  examples: |
+    - glsid
+    - glsid
+- synonym: GMSI
+  examples: |
+    - gmsi
+- synonym: GIL
+  examples: |
+    - gil
+    - genie industrielle
+- synonym: SEER
+  examples: |
+    - seer
+    - seer
+- synonym: GECSI
+  examples: |
+    - gecsi
+- synonym: AOE
+  examples: |
+    - aoe
+- synonym: FC
+  examples: |
+    - fc
+- synonym: ENSET
+  examples: |
+    - enset
+    - enset-m
+    - enset-media
+    - enset media
+    - ENSET-M
+    - ENSET MEDIA

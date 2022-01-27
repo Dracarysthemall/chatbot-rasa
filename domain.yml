@@ -1,0 +1,64 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- ask_for_help
+- intent_depatement
+- merci
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- scolarite
+- formation
+- ask_about_branches
+- ask_entrance_exam
+- nlu_fallback
+entities:
+- branche
+slots:
+  branche:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Bonjour! comment je peux vous aider?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: 'je suis un Bot, Developpé par FYH! '
+  utter_scolarite:
+  - text: 'Adresse postale : BP 159 Mohammedia Principale Adresse : Boulevard Hassan
+      II Mohammedia Tél. : (212) 5 23 32 22 20 / (212) 5 23 32 35 30 Fax : (212) 5
+      23 32 25 46 Horraire : 9h - 12h30 14h30 - 18h'
+  utter_entrance_exam:
+  - text: Les councours d'acces ou cycles d'ingenieur sont normalement organisé le
+      mois de juillet
+  utter_formation:
+  - text: "À l’enset elles existent trois types de formations:\nDiplôme d'Ingénieur\
+      \ d'état: \nGIL-Génie Industriel et Logistique \nGMSI - Génie Mécanique des\
+      \ Systèmes Industriels \nGECSI - Génie Electrique et Contrôle des Systèmes Industriels\
+      \ \nSEER - Génie Electrique option : Systèmes Electriques et Energies Renouvelables\
+      \ \nII-BDCC - Ingénierie Informatique : Big Data et Cloud Computing \nGLSID\
+      \ - Génie du Logiciel et des Systèmes Informatiques Distribués  \nLicence d'Etudes\
+      \ Professionnelles: \nESEG - Education et Sciences Economiques et de Gestion\
+      \  \nDiplôme Universitaire de Technologie: \nFC - Finance et Comptabilité \n\
+      AOE - Administration et Organisation des Entreprises"
+  utter_fallback:
+  - text: Je m'execuse, je n'ai pas compris. Reformuler votre question s'il vous plait!
+  utter_help_user:
+  - buttons:
+    - payload: formation
+      title: Formations disponibles.
+    - payload: scolarite
+      title: Contacte la scolarité.
+    - payload: Quelle branche ?
+      title: Voir le programme.
+    - payload: Date des concoures
+      title: Date des concoures.
+    text: Please choose one of this options.
+actions:
+- action_Provide_Infos

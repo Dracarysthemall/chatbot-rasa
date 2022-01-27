@@ -1,0 +1,30 @@
+version: "2.0"
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+- rule: fallback rule
+  steps:
+  - intent: nlu_fallback
+  - action: utter_fallback
+- rule: provide help
+  steps:
+  - intent: ask_for_help
+  - action: utter_help_user
+- rule: say hi
+  steps:
+  - intent: greet
+  - action: utter_greet
+- rule: answer about foramtion
+  steps:
+  - intent: formation
+  - action: utter_formation
+- rule: answer about scolarite
+  steps:
+  - intent: scolarite
+  - action: utter_scolarite
